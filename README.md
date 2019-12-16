@@ -143,10 +143,12 @@
 ```
 5. **BlockchainのMarble1個の資産移行手続きを確認**
    - ここでは、BlockchainのTransaction「AbeさんからTrumpeさんへのMarble1個遣り取り資産移行」の結果を確認します。
+   - [5-1] **Transaction結果画面へ移動**
    - 左画面のTRANSACTIONSから「All Transactions」を選択します。 
    - 下記の画面の各STEPが、BlockchainのTransactionになっています。PARTICIPANTとしてAbeさんやTrumpさんが追加されたTransaction結果が、一番右の「View Record」をクリックするとBlockchainのTransactionの結果を確認する事が出来ます。
    - <img src="./BC_Marble001.png" alt="bc_marble_output" title="bc_result" width="400" border="1" />
-   - Abeさんの**PARTICIPANT生成結果のTransactionを確認**する↓
+   - [5-2] Abeさんの**PARTICIPANT生成結果のTransactionを確認**する
+   - tmpstampで生成時間の情報や、TransactionIdがハッシュとして保存されている事が判ります。(Hash値を、Blockchainではチェーン構造で受け渡ししていきます。)
  ```
    {
  "$class": "org.hyperledger.composer.system.AddParticipant",
@@ -163,7 +165,8 @@
  "timestamp": "2019-12-16T04:16:22.135Z"
 }
 ```
-　　　- **Marble001のAbeさんからTrumpさんへの資産移動結果のTransactionを確認**する。↓
+   - [5-3] **Marble001のAbeさんからTrumpさんへの資産移動結果のTransactionを確認**する。
+   - class,marble, newOwner以外に、transactionIdとtimestampが保存されている事が判ります。上記のAbeさんPARTICIPANT生成時も同じ様にHash値を持っていました。この様に、Blockchainは作業毎にHashを生成して次へ受け渡す仕組みを持ちます。1つのTransactionを編集（改ざん）しようとすると、元のTransactionもHash値も辿って変更していく必要があるので、Blockchainは改ざんに頑健な仕組みと言われています。
 ```
 {
  "$class": "org.hyperledger_composer.marbles.TradeMarble",
