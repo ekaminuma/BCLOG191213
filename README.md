@@ -13,7 +13,7 @@
 　　- 実習時に入力する必要があった部分が消去されています。該当コード部分を、下記に掲載いたします。
 ---
 
-### 実習手順
+### 実習手順[1]　Embty-Business-Networkの準備
 
 詳しい実習手順は講義中に紫関講師により解説されています。講義ビデオは、データ人材育成プログラムの[e-Learning教材](https://md-dsc.learning-ware.jp/
 )で御確認下さい。
@@ -47,13 +47,21 @@
 10. 余分なModelファイルを削除する。 
 　　　- Marble.cto以外の「model.cto」ファイル等を、左画面から選択してごみ箱マークを押下して削除（Delete）する。
      - 左画面は「About(README.md,package.json)」「models/Marble.cto」「lib/Marble.js」「permissions.acl」だけにする。
-   
-    
-    -
+11. **左画面の下の「Deploy changes」ボタンを押下**する。
+     - ボタンは灰色非選択状態になるが、そのままで大丈夫です。
 
-    
+---
 
-6. ** 
+### 実習手順[2]　Marbleのハンズオン基礎編
+
+- 構築したBlockchain上で、AbeさんとTrumpさんの間でMarbleのやりとり(=Assetの移転)をします。
+- 作業内容の確認
+   - 1. (Defineタブ)Model Fileの確認(Participantクラスの定義,Assetクラスの定義,Transactionクラスの定義)
+   - 2. (Defineタブ)Script Fileの確認(Transaction Processor Functionの定義)
+   - 3. (Defineタブ)Access Controlの確認
+   - 4. (Testタブ)テスト用インスタンスの作成(Participantインスタンスの作成,Assetインスタンスの作成)
+   - 5. (Testタブ)Transactionの実行
+   - 6. (Testタブ)実行結果の確認(Assetインスタンスの確認)
 
 ---
 
