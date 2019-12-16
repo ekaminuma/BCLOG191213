@@ -10,7 +10,7 @@
     - 幾つかのHCの機能がHyperledge fabric本体に吸収されました。
     - 使い易い他のソフトウェア候補が少ない事から、現在もデモ目的で使用されています。
 - 本来はデフォルトとして存在していたプログラムコードが、Deprecatedにより一部消去されました。
-　　- 実習時に入力する必要があった部分が消去されています。該当コード部分を、下記に掲載いたします。
+   - 実習時に入力する必要があった部分が消去されています。該当コード部分を、下記に掲載いたします。
 ---
 
 ### 実習手順[1]　Embty-Business-Networkの準備
@@ -45,8 +45,8 @@
     - 左画面の「UPDATE NETWORK」直上の「Ade a file」を選択する。
     - ポップアップ画面にアクセスコントロールファイル(permissions.acl)を流し込み、置き換えなら「Replace」ボタンを押下する。
 10. 余分なModelファイルを削除する。 
-　　　- Marble.cto以外の「model.cto」ファイル等を、左画面から選択してごみ箱マークを押下して削除（Delete）する。
-     - 左画面は「About(README.md,package.json)」「models/Marble.cto」「lib/Marble.js」「permissions.acl」だけにする。
+    - Marble.cto以外の「model.cto」ファイル等を、左画面から選択してごみ箱マークを押下して削除（Delete）する。
+    - 左画面は「About(README.md,package.json)」「models/Marble.cto」「lib/Marble.js」「permissions.acl」だけにする。
 11. **左画面の下の「Deploy changes」ボタンを押下**する。
      - ボタンは灰色非選択状態になるが、そのままで大丈夫です。
 
@@ -56,7 +56,7 @@
 
 - 構築したBlockchain上で、AbeさんとTrumpさんの間でMarble1個を受け渡し(=Assetの移転)をします。
 
-1. 下記の**作業内容**の4~6番を行います。1~3番までは前述7～9番(IBM社配布データをファイル読込)で対応済です。
+1. 下記の**作業内容**の4～6番を行います。1～3番までは上記実習手順[1]7～9番(IBM社配布データをファイル読込)で対応済です。
    - 1. (Defineタブ)Model Fileの確認(Participantクラスの定義,Assetクラスの定義,Transactionクラスの定義)
    - 2. (Defineタブ)Script Fileの確認(Transaction Processor Functionの定義)
    - 3. (Defineタブ)Access Controlの確認
@@ -64,8 +64,8 @@
    - 5. (Testタブ)Transactionの実行
    - 6. (Testタブ)実行結果の確認(Assetインスタンスの確認)
 2. Testタブで**PARTICIPANTSインスタンスをAbeさんとTrumpさん分の2個作成**
-　 - 左画面はPARTICIPANTS下の「Player」が選択状態になっている事を確認します。
-　 - Testタブを選択した画面を開き、**右上の「Create New Participant」ボタンを押下**してAbeさんとTrumpさんを追加します。
+   - 左画面はPARTICIPANTS下の「Player」が選択状態になっている事を確認します。
+   - Testタブを選択した画面を開き、**右上の「Create New Participant」ボタンを押下**してAbeさんとTrumpさんを追加します。
    - ボタン押下でのポップアップ画面のデフォルトは下記になっています。
 ```
 {
@@ -75,7 +75,7 @@
   "lastName": ""
 }
 ```
-   - 1つ目のParticipantを下記の様に編集します。email,firstName,lastNameを書き換えます。
+    - 1つ目のParticipantを下記の様に編集します。email,firstName,lastNameを書き換えます。
 ```
 {
   "$class": "org.hyperledger_composer.marbles.Player",
@@ -84,7 +84,7 @@
   "lastName": "Abe"
 }
 ```
-   - 2つ目のParticipantも「Create New Participant」から下記の様に編集します。
+    - 2つ目のParticipantも「Create New Participant」から下記の様に編集します。
 ```
 {
   "$class": "org.hyperledger_composer.marbles.Player",
@@ -95,10 +95,10 @@
 ```
 
 3.  Testタブで**ASSETSインスタンスを遣り取りするMarble1個分を作成**
-　 - 続いてTestタブを選択した画面のまま、左画面のASSETS下の「Marble」を選択します。
-   - 左画面はASSETS下の「Marble」が選択状態になっている事を確認します。
-　 - **右上の「Create New Asset」ボタンを押下**してSmall Red Marbleとを追加します。
-   - ボタン押下でのポップアップ画面のデフォルトは下記になっています。
+    - 続いてTestタブを選択した画面のまま、左画面のASSETS下の「Marble」を選択します。
+    - 左画面はASSETS下の「Marble」が選択状態になっている事を確認します。
+　  - **右上の「Create New Asset」ボタンを押下**してSmall Red Marbleとを追加します。
+    - ボタン押下でのポップアップ画面のデフォルトは下記になっています。
 ```
 {
   "$class": "org.hyperledger_composer.marbles.Marble",
@@ -108,9 +108,9 @@
   "owner": "resource:org.hyperledger_composer.marbles.Player#7178"
 }
 ```
-  - marbleIdをデフォルト番号から「marble001」に変更します。
-  - またownerの#以下を、デフォルト番号からAbeさんのメールアドレスに変更します。
-  - 画面下の「Create New」ボタンを押下します。
+    - marbleIdをデフォルト番号から「marble001」に変更します。
+    - またownerの#以下を、デフォルト番号からAbeさんのメールアドレスに変更します。
+    - 画面下の「Create New」ボタンを押下します。
 ```
 {
   "$class": "org.hyperledger_composer.marbles.Marble",
@@ -122,9 +122,9 @@
 ```
 
 4.  **Marble001をTrumpさんに渡すTransactionを定義**する
-   - 左画面ボタンで**Submit Transactionボタンを押下**する
-　 - 左画面のSubmit Transactionボタンを押下するとポップアップでTransaction編集画面になります。
-　 - ポップアップ画面のデフォルトは下記になっています。
+    - 左画面ボタンで**Submit Transactionボタンを押下**する
+    - 左画面のSubmit Transactionボタンを押下するとポップアップでTransaction編集画面になります。
+    - ポップアップ画面のデフォルトは下記になっています。
 ```
 {
   "$class": "org.hyperledger_composer.marbles.TradeMarble",
@@ -132,8 +132,8 @@
   "newOwner": "resource:org.hyperledger_composer.marbles.Player#3145"
 }
 ```
-   - Marbleの#以降は「marble001」に編集し、newOwnerの#以降はTrumpさんのメールアドレスに編集します。
-   - ポップアップ最後の「Submit」を押下します。
+    - Marbleの#以降は「marble001」に編集し、newOwnerの#以降はTrumpさんのメールアドレスに編集します。
+    - ポップアップ最後の「Submit」を押下します。
 ```
 {
   "$class": "org.hyperledger_composer.marbles.TradeMarble",
@@ -142,13 +142,13 @@
 }
 ```
 5. **BlockchainのMarble1個の資産移行手続きを確認**
-   - ここでは、BlockchainのTransaction「AbeさんからTrumpeさんへのMarble1個遣り取り資産移行」の結果を確認します。
-   - [5-1] **Transaction結果画面へ移動**
-   - 左画面のTRANSACTIONSから「All Transactions」を選択します。 
-   - 下記の画面の各STEPが、BlockchainのTransactionになっています。PARTICIPANTとしてAbeさんやTrumpさんが追加されたTransaction結果が、一番右の「View Record」をクリックするとBlockchainのTransactionの結果を確認する事が出来ます。
-   - <img src="./BC_Marble001.png" alt="bc_marble_output" title="bc_result" width="400" border="1" />
-   - [5-2] Abeさんの**PARTICIPANT生成結果のTransactionを確認**する
-   - tmpstampで生成時間の情報や、TransactionIdがハッシュとして保存されている事が判ります。(Hash値を、Blockchainではチェーン構造で受け渡ししていきます。)
+    - ここでは、BlockchainのTransaction「AbeさんからTrumpeさんへのMarble1個遣り取り資産移行」の結果を確認します。
+    - [5-1] **Transaction結果画面へ移動**
+    - 左画面のTRANSACTIONSから「All Transactions」を選択します。 
+    - 下記の画面の各STEPが、BlockchainのTransactionになっています。PARTICIPANTとしてAbeさんやTrumpさんが追加されたTransaction結果が、一番右の「View Record」をクリックするとBlockchainのTransactionの結果を確認する事が出来ます。
+    - <img src="./BC_Marble001.png" alt="bc_marble_output" title="bc_result" width="400" border="1" />
+    - [5-2] Abeさんの**PARTICIPANT生成結果のTransactionを確認**する
+    - ***timestampでTransaction生成時間の情報を保持しており、TransactionIdがハッシュ値で保存されている***事が判ります。(Blockchainでは、Hash値をチェーン構造で受け渡ししていきます。)
  ```
    {
  "$class": "org.hyperledger.composer.system.AddParticipant",
@@ -165,8 +165,8 @@
  "timestamp": "2019-12-16T04:16:22.135Z"
 }
 ```
-   - [5-3] **Marble001のAbeさんからTrumpさんへの資産移動結果のTransactionを確認**する。
-   - class,marble, newOwner以外に、transactionIdとtimestampが保存されている事が判ります。上記のAbeさんPARTICIPANT生成時も同じ様にHash値を持っていました。この様に、Blockchainは作業毎にHashを生成して次へ受け渡す仕組みを持ちます。1つのTransactionを編集（改ざん）しようとすると、元のTransactionもHash値も辿って変更していく必要があるので、Blockchainは改ざんに頑健な仕組みと言われています。
+    - [5-3] **Marble001のAbeさんからTrumpさんへの資産移動結果のTransactionを確認**する。
+    - class,marble, newOwner以外に、transactionIdとtimestampが保存されている事が判ります。上記のAbeさんPARTICIPANT生成時も、同じ様にHash値が生成されていました。***Blockchainは、作業毎に以前のHash値を基に、次のHash値を生成する仕組みを持ちます。1つのTransactionを編集（改ざん）しようとすると、元のTransactionもHash値も辿って変更していく必要があるので、Blockchainは改ざんに頑健な仕組みと言われています***。
 ```
 {
  "$class": "org.hyperledger_composer.marbles.TradeMarble",
