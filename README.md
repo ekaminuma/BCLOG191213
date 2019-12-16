@@ -29,9 +29,13 @@
    - (1.BASIC INFORMATION)では、何もせずデフォルトのままにします。
    - (2.Model Network Starter Template)で真ん中の「Empty-business-network」を選択して、右側の「Deploy」ボタンを押下します。
    - <img src="./MODEL_TEMPLATE.png" alt="empty-business-network-sel2" title="sel2選択画面" width="400" border="1" />
-5.  **Connect nowを選択**
+5. **Connect nowを選択**
    - 左に「admin@empty-business-network」でUSER ID: adminのempty-business-networkが生成されるので、LINK状態になっている「Connect now」を押下します。
-6.  
+6. e-Learningサイトから**Marble.zipデータファイルをダウンロードして解凍**する。
+    - 解凍後に、Marbleディレクトリには下記3ファイルが入っています。 
+    -　Marble.cto, Marble.js, permissions.acl
+7.   
+6. ** 
 
 ---
 
