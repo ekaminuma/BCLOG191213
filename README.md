@@ -55,6 +55,7 @@
 ### 実習手順[2]　ハンズオン基礎編：Marble1個の資産移動
 
 - 構築したBlockchain上で、AbeさんとTrumpさんの間でMarble1個を受け渡し(=Assetの移転)をします。
+- プログラム言語はjavascriptです。
 
 1. 下記の**作業内容**の4～6番を行います。1～3番までは上記実習手順[1]7～9番(IBM社配布データをファイル読込)で対応済です。
    - 1. (Defineタブ)Model Fileの確認(Participantクラスの定義,Assetクラスの定義,Transactionクラスの定義)
@@ -67,7 +68,8 @@
    - 左画面はPARTICIPANTS下の「Player」が選択状態になっている事を確認します。
    - Testタブを選択した画面を開き、**右上の「Create New Participant」ボタンを押下**してAbeさんとTrumpさんを追加します。
    - ボタン押下でのポップアップ画面のデフォルトは下記になっています。
-```js    {
+```js    
+   {
     "$class": "org.hyperledger_composer.marbles.Player",
     "email": "8169",
     "firstName": "",
