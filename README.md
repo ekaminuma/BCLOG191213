@@ -15,8 +15,8 @@
 
 ### 実習手順
 
-詳しい実習手順は講義中に解説されていますので、データ人材育成プログラムの[e-Learning教材](https://md-dsc.learning-ware.jp/
-)（講義ビデオ）で御確認下さい。
+詳しい実習手順は講義中に紫関講師により解説されています。講義ビデオは、データ人材育成プログラムの[e-Learning教材](https://md-dsc.learning-ware.jp/
+)で御確認下さい。
 
 - Hyperledger Composerの起動
    - https://hyperledger.github.io/composer/latest/ から「Try It Online」をクリック
