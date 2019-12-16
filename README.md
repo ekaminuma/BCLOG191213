@@ -63,7 +63,7 @@
    - 4. (Testタブ)テスト用インスタンスの作成(Participantインスタンスの作成,Assetインスタンスの作成)
    - 5. (Testタブ)Transactionの実行
    - 6. (Testタブ)実行結果の確認(Assetインスタンスの確認)
-2. Testタブを選択した画面を開き、**右上の「Create New Participant」ボタンを押下**する。
+2. Testタブを選択した画面を開き、**右上の「Create New Participant」ボタンを押下**してAbeさんとTrumpさんを追加します。
    - デフォルトは下記になっています。
 ```
 {
@@ -73,6 +73,25 @@
   "lastName": ""
 }
 ```
+   - 1つ目のParticipantは下記の様に追記します。
+```
+{
+  "$class": "org.hyperledger_composer.marbles.Player",
+  "email": "Shinzo.Abe@mail.jp",
+  "firstName": "Shinzo",
+  "lastName": "Abe"
+}
+```
+   - 2つ目のParticipantは下記の様に追記します。
+```
+{
+  "$class": "org.hyperledger_composer.marbles.Player",
+  "email": "Donald.Trump@mail.us",
+  "firstName": "Donald",
+  "lastName": "Trump"
+}
+```
+
 3. 
 ---
 
