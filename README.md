@@ -13,10 +13,15 @@
 　　- 実習時に入力する必要があった部分が消去されています。該当コード部分を、下記に掲載いたします。
 ---
 
-### 目次
+### 実習手順
 
-- Blockchain入門実習の流れ
-- 
+詳しい実習手順は講義中に解説されていますので、データ人材育成プログラムの[e-Learning教材](https://md-dsc.learning-ware.jp/
+)（講義ビデオ）で御確認下さい。
+
+- Hyperledger Composerの起動
+   - https://hyperledger.github.io/composer/latest/ から「Try It Online」をクリック
+- Let's Blockchain 
+   - Welcome to Hyperledger Composer Playground!とポップアップ画面が出るので、「Let's Blockchain」ボタンを押す。
 - 
 
 ---
