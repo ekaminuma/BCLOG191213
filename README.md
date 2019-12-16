@@ -31,23 +31,23 @@
    - <img src="./MODEL_TEMPLATE.png" alt="empty-business-network-sel2" title="sel2選択画面" width="400" border="1" />
 5. **Connect nowを選択**
    - 左に「admin@empty-business-network」でUSER ID: adminのempty-business-networkが生成されるので、LINK状態になっている「Connect now」を押下します。
-6. **Marble.zipデータファイルをダウンロードして解凍**する。
+6. **Marble.zipデータファイルをダウンロードして解凍**
     - Marble.zipをe-Learningサイトからダウンロードして下さい。
     - Marble.zipを解凍して下さい。
     - Marbleディレクトリに「Marble.cto, Marble.js, permissions.acl」の3ファイルがある事を確認して下さい。
-7. **Marble.ctoモデルファイルを追加**する。
+7. **Marble.ctoモデルファイルを追加**
     - 左画面の「UPDATE NETWORK」直上の「Ade a file」を選択する。
     - ポップアップ画面にModel File(Marble.cto)を流し込み「Add」ボタンを押下する。
-8. **Marble.jsスクリプトファイルを追加**する。
+8. **Marble.jsスクリプトファイルを追加**
     - 左画面の「UPDATE NETWORK」直上の「Ade a file」を選択する。
     - ポップアップ画面にScript File(Marble.js)を流し込む。
-9. **permissions.aclアクセスコントロールファイルを追加**する。
+9. **permissions.aclアクセスコントロールファイルを追加**
     - 左画面の「UPDATE NETWORK」直上の「Ade a file」を選択する。
     - ポップアップ画面にアクセスコントロールファイル(permissions.acl)を流し込み、置き換えなら「Replace」ボタンを押下する。
-10. 余分なModelファイルを削除する。 
+10. **余分なModelファイルを削除** 
     - Marble.cto以外の「model.cto」ファイル等を、左画面から選択してごみ箱マークを押下して削除（Delete）する。
     - 左画面は「About(README.md,package.json)」「models/Marble.cto」「lib/Marble.js」「permissions.acl」だけにする。
-11. **左画面の下の「Deploy changes」ボタンを押下**する。
+11. **左画面の下の「Deploy changes」ボタンを押下**
      - ボタンは灰色非選択状態になるが、そのままで大丈夫です。
 
 ---
