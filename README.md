@@ -19,15 +19,19 @@
 )で御確認下さい。
 
 1. **Hyperledger Composerの起動**
-   - https://hyperledger.github.io/composer/latest/ から「Try It Online」をクリック
+   - https://hyperledger.github.io/composer/latest/ から「Try It Online」をクリックします。
 2. **Let's Blockchainを選択** 
-   - Welcome to Hyperledger Composer Playground!とポップアップ画面が出るので、「Let's Blockchain」ボタンを押す。
+   - Welcome to Hyperledger Composer Playground!とポップアップ画面が出るので、「Let's Blockchain」ボタンを押下します。
 3. **Deploy a new business networkを選択**
-   - こんにちは、Hello, Composer!の右側の点線で囲まれている「Deploy a new business network」を選択。
-4. **empty-business-networkを選択**
-   - 「Deploy a new business network」の画面が現れる。
-   - (1.BASIC INFORMATION)(2.Model Network Starter Template)で「Empty-business-network」を選択
-   
+   - こんにちは、Hello, Composer!の右側の点線で囲まれている「Deploy a new business network」を選択します。
+4. **empty-business-networkを選択, Deployを押下**
+   - 「Deploy a new business network」の画面が現れます。
+   - (1.BASIC INFORMATION)では、何もせずデフォルトのままにします。
+   - (2.Model Network Starter Template)で真ん中の「Empty-business-network」を選択して、右側の「Deploy」ボタンを押下します。
+   - <img src="./MODEL_TEMPLATE.png" alt="empty-business-network-sel2" title="sel2選択画面">
+5.  **Connect nowを選択**
+   - 左に「admin@empty-business-network」でUSER ID: adminのempty-business-networkが生成されるので、LINK状態になっている「Connect now」を押下します。
+6.  
 
 ---
 
