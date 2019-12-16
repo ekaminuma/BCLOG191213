@@ -67,32 +67,36 @@
    - 左画面はPARTICIPANTS下の「Player」が選択状態になっている事を確認します。
    - Testタブを選択した画面を開き、**右上の「Create New Participant」ボタンを押下**してAbeさんとTrumpさんを追加します。
    - ボタン押下でのポップアップ画面のデフォルトは下記になっています。
-``
+
+<code>
 {
   "$class": "org.hyperledger_composer.marbles.Player",
   "email": "8169",
   "firstName": "",
   "lastName": ""
 }
-``
+</code>
+
     - 1つ目のParticipantを下記の様に編集します。email,firstName,lastNameを書き換えます。
-``
+    
+<code>    
 {
   "$class": "org.hyperledger_composer.marbles.Player",
   "email": "Shinzo.Abe@mail.jp",
   "firstName": "Shinzo",
   "lastName": "Abe"
 }
-``
+</code>
+
     - 2つ目のParticipantも「Create New Participant」から下記の様に編集します。
-``
+<code>
 {
   "$class": "org.hyperledger_composer.marbles.Player",
   "email": "Donald.Trump@mail.us",
   "firstName": "Donald",
   "lastName": "Trump"
 }
-``
+</code>
 
 3.  Testタブで**ASSETSインスタンスを遣り取りするMarble1個分を作成**
     - 続いてTestタブを選択した画面のまま、左画面のASSETS下の「Marble」を選択します。
