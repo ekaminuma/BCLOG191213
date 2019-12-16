@@ -68,25 +68,25 @@
    - Testタブを選択した画面を開き、**右上の「Create New Participant」ボタンを押下**してAbeさんとTrumpさんを追加します。
    - ボタン押下でのポップアップ画面のデフォルトは下記になっています。
 
-<code>
+```js
 {
   "$class": "org.hyperledger_composer.marbles.Player",
   "email": "8169",
   "firstName": "",
   "lastName": ""
-}
-</code>
+ } 
+```
 
     - 1つ目のParticipantを下記の様に編集します。email,firstName,lastNameを書き換えます。
     
-<code>    
+```js
 {
   "$class": "org.hyperledger_composer.marbles.Player",
   "email": "Shinzo.Abe@mail.jp",
   "firstName": "Shinzo",
   "lastName": "Abe"
 }
-</code>
+```
 
     - 2つ目のParticipantも「Create New Participant」から下記の様に編集します。
 <code>
