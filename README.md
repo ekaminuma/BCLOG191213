@@ -149,7 +149,7 @@
     - <img src="./BC_Marble001.png" alt="bc_marble_output" title="bc_result" width="400" border="1" />
     - [5-2] Abeさんの**PARTICIPANT生成結果のTransactionを確認**する
     - ***timestampでTransaction生成時間の情報を保持しており、TransactionIdがハッシュ値で保存されている***事が判ります。(Blockchainでは、Hash値をチェーン構造で受け渡ししていきます。)
- ```
+```
    {
  "$class": "org.hyperledger.composer.system.AddParticipant",
  "resources": [
