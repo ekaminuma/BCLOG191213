@@ -13,7 +13,7 @@
    - 実習時に入力する必要があった部分が消去されています。該当コード部分を、下記に掲載いたします。
 ---
 
-### 実習手順[1]　Embty-Business-Networkの準備
+### 実習手順[1]　Empty-Business-Networkの準備
 
 詳しい実習手順は講義中に紫関講師により解説されています。講義ビデオは、データ人材育成プログラムの[e-Learning教材](https://md-dsc.learning-ware.jp/
 )で御確認下さい。
