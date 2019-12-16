@@ -67,30 +67,31 @@
    - 左画面はPARTICIPANTS下の「Player」が選択状態になっている事を確認します。
    - Testタブを選択した画面を開き、**右上の「Create New Participant」ボタンを押下**してAbeさんとTrumpさんを追加します。
    - ボタン押下でのポップアップ画面のデフォルトは下記になっています。
-    {
+```js    {
     "$class": "org.hyperledger_composer.marbles.Player",
     "email": "8169",
     "firstName": "",
     "lastName": ""
-    } 
- 
-    - 1つ目のParticipantを下記の様に編集します。email,firstName,lastNameを書き換えます。
-    {
-    "$class": "org.hyperledger_composer.marbles.Player",
-    "email": "Shinzo.Abe@mail.jp",
-    "firstName": "Shinzo",
-    "lastName": "Abe"
     }
-    
-    - 2つ目のParticipantも「Create New Participant」から下記の様に編集します。
-
-    {
-    "$class": "org.hyperledger_composer.marbles.Player",
-    "email": "Donald.Trump@mail.us",
-    "firstName": "Donald",
-    "lastName": "Trump"
-    }
-
+``` 
+1つ目のParticipantを下記の様に編集します。email,firstName,lastNameを書き換えます。
+```js
+   {
+   "$class": "org.hyperledger_composer.marbles.Player",
+   "email": "Shinzo.Abe@mail.jp",
+   "firstName": "Shinzo",
+   "lastName": "Abe"
+   }    
+```
+2つ目のParticipantも「Create New Participant」から下記の様に編集します。
+```js
+   {
+   "$class": "org.hyperledger_composer.marbles.Player",
+   "email": "Donald.Trump@mail.us",
+   "firstName": "Donald",
+   "lastName": "Trump"
+   }
+```
 
 3.  Testタブで**ASSETSインスタンスを遣り取りするMarble1個分を作成**
     - 続いてTestタブを選択した画面のまま、左画面のASSETS下の「Marble」を選択します。
@@ -106,9 +107,9 @@
   "owner": "resource:org.hyperledger_composer.marbles.Player#7178"
 }
 ```
-    - marbleIdをデフォルト番号から「marble001」に変更します。
-    - またownerの#以下を、デフォルト番号からAbeさんのメールアドレスに変更します。
-    - 画面下の「Create New」ボタンを押下します。
+- marbleIdをデフォルト番号から「marble001」に変更します。
+- またownerの#以下を、デフォルト番号からAbeさんのメールアドレスに変更します。
+- 画面下の「Create New」ボタンを押下します。
 ```js
 {
   "$class": "org.hyperledger_composer.marbles.Marble",
@@ -130,8 +131,8 @@
   "newOwner": "resource:org.hyperledger_composer.marbles.Player#3145"
 }
 ```
-    - Marbleの#以降は「marble001」に編集し、newOwnerの#以降はTrumpさんのメールアドレスに編集します。
-    - ポップアップ最後の「Submit」を押下します。
+- Marbleの#以降は「marble001」に編集し、newOwnerの#以降はTrumpさんのメールアドレスに編集します。
+- ポップアップ最後の「Submit」を押下します。
 ```js
 {
   "$class": "org.hyperledger_composer.marbles.TradeMarble",
@@ -164,8 +165,8 @@
  "timestamp": "2019-12-16T04:16:22.135Z"
 }
 ```
-    - [5-3] **Marble001のAbeさんからTrumpさんへの資産移動結果のTransactionを確認**する。
-    - class,marble, newOwner以外に、transactionIdとtimestampが保存されている事が判ります。上記のAbeさんPARTICIPANT生成時も、同じ様にHash値が生成されていました。***Blockchainは、作業毎に以前のHash値を基に、次のHash値を生成する仕組みを持ちます。1つのTransactionを編集（改ざん）しようとすると、元のTransactionもHash値も辿って変更していく必要があるので、Blockchainは改ざんに頑健な仕組みと言われています***。
+  - [5-3] **Marble001のAbeさんからTrumpさんへの資産移動結果のTransactionを確認**する。
+  - class,marble, newOwner以外に、transactionIdとtimestampが保存されている事が判ります。上記のAbeさんPARTICIPANT生成時も、同じ様にHash値が生成されていました。***Blockchainは、作業毎に以前のHash値を基に、次のHash値を生成する仕組みを持ちます。1つのTransactionを編集（改ざん）しようとすると、元のTransactionもHash値も辿って変更していく必要があるので、Blockchainは改ざんに頑健な仕組みと言われています***。
     
 ```js
 {
