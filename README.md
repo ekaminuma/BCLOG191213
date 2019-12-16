@@ -149,6 +149,7 @@
     - 下記の画面の各STEPが、BlockchainのTransactionになっています。PARTICIPANTとしてAbeさんやTrumpさんが追加されたTransaction結果が、一番右の「View Record」をクリックするとBlockchainのTransactionの結果を確認する事が出来ます。
     - <img src="./BC_Marble001.png" alt="bc_marble_output" title="bc_result" width="400" border="1" />
     - [5-2] Abeさんの**PARTICIPANT生成結果のTransactionを確認**する
+    - 1つ目のAddParticipant Transactionの「view record」を見てみましょう。
     - ***timestampでTransaction生成時間の情報を保持しており、TransactionIdがハッシュ値で保存されている***事が判ります。(Blockchainでは、Hash値をチェーン構造で受け渡ししていきます。)
     
 ```js
@@ -168,6 +169,7 @@
 }
 ```
   - [5-3] **Marble001のAbeさんからTrumpさんへの資産移動結果のTransactionを確認**する。
+  - 最新のTransactionのTradeMarbleの「view record」を見てみましょう。
   - class,marble, newOwner以外に、transactionIdとtimestampが保存されている事が判ります。上記のAbeさんPARTICIPANT生成時も、同じ様にHash値が生成されていました。***Blockchainは、作業毎に以前のHash値を基に、次のHash値を生成する仕組みを持ちます。1つのTransactionを編集（改ざん）しようとすると、元のTransactionもHash値も辿って変更していく必要があるので、Blockchainは改ざんに頑健な仕組みと言われています***。
     
 ```js
