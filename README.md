@@ -67,32 +67,32 @@
    - 左画面はPARTICIPANTS下の「Player」が選択状態になっている事を確認します。
    - Testタブを選択した画面を開き、**右上の「Create New Participant」ボタンを押下**してAbeさんとTrumpさんを追加します。
    - ボタン押下でのポップアップ画面のデフォルトは下記になっています。
-```
+``
 {
   "$class": "org.hyperledger_composer.marbles.Player",
   "email": "8169",
   "firstName": "",
   "lastName": ""
 }
-```
+``
     - 1つ目のParticipantを下記の様に編集します。email,firstName,lastNameを書き換えます。
-```
+``
 {
   "$class": "org.hyperledger_composer.marbles.Player",
   "email": "Shinzo.Abe@mail.jp",
   "firstName": "Shinzo",
   "lastName": "Abe"
 }
-```
+``
     - 2つ目のParticipantも「Create New Participant」から下記の様に編集します。
-```
+``
 {
   "$class": "org.hyperledger_composer.marbles.Player",
   "email": "Donald.Trump@mail.us",
   "firstName": "Donald",
   "lastName": "Trump"
 }
-```
+``
 
 3.  Testタブで**ASSETSインスタンスを遣り取りするMarble1個分を作成**
     - 続いてTestタブを選択した画面のまま、左画面のASSETS下の「Marble」を選択します。
@@ -149,8 +149,9 @@
     - <img src="./BC_Marble001.png" alt="bc_marble_output" title="bc_result" width="400" border="1" />
     - [5-2] Abeさんの**PARTICIPANT生成結果のTransactionを確認**する
     - ***timestampでTransaction生成時間の情報を保持しており、TransactionIdがハッシュ値で保存されている***事が判ります。(Blockchainでは、Hash値をチェーン構造で受け渡ししていきます。)
+    
 ```
-   {
+{
  "$class": "org.hyperledger.composer.system.AddParticipant",
  "resources": [
   {
@@ -165,8 +166,12 @@
  "timestamp": "2019-12-16T04:16:22.135Z"
 }
 ```
+```
+```
+
     - [5-3] **Marble001のAbeさんからTrumpさんへの資産移動結果のTransactionを確認**する。
     - class,marble, newOwner以外に、transactionIdとtimestampが保存されている事が判ります。上記のAbeさんPARTICIPANT生成時も、同じ様にHash値が生成されていました。***Blockchainは、作業毎に以前のHash値を基に、次のHash値を生成する仕組みを持ちます。1つのTransactionを編集（改ざん）しようとすると、元のTransactionもHash値も辿って変更していく必要があるので、Blockchainは改ざんに頑健な仕組みと言われています***。
+    
 ```
 {
  "$class": "org.hyperledger_composer.marbles.TradeMarble",
@@ -176,6 +181,7 @@
  "timestamp": "2019-12-16T04:43:00.596Z"
 }
 ```
+
 
 ---
 - Textでは、Marble2個の遣り取りのプログラムコードも紹介されています。受講生の皆様から御希望があれば、Marble2個部のコードもこちらに掲載致します。
