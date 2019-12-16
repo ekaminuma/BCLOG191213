@@ -63,8 +63,10 @@
    - 4. (Testタブ)テスト用インスタンスの作成(Participantインスタンスの作成,Assetインスタンスの作成)
    - 5. (Testタブ)Transactionの実行
    - 6. (Testタブ)実行結果の確認(Assetインスタンスの確認)
-2. Testタブを選択した画面を開き、**右上の「Create New Participant」ボタンを押下**してAbeさんとTrumpさんを追加します。
-   - デフォルトは下記になっています。
+2. Testタブで**PARTICIPANTSインスタンスをAbeさんとTrumpさん分の2個作成**
+　 - 左画面はPARTICIPANTS下の「Player」が選択状態になっている事を確認します。
+　 - Testタブを選択した画面を開き、**右上の「Create New Participant」ボタンを押下**してAbeさんとTrumpさんを追加します。
+   - ボタン押下でのポップアップ画面のデフォルトは下記になっています。
 ```
 {
   "$class": "org.hyperledger_composer.marbles.Player",
@@ -73,7 +75,7 @@
   "lastName": ""
 }
 ```
-   - 1つ目のParticipantは下記の様に追記します。
+   - 1つ目のParticipantを下記の様に編集します。email,firstName,lastNameを書き換えます。
 ```
 {
   "$class": "org.hyperledger_composer.marbles.Player",
@@ -82,7 +84,7 @@
   "lastName": "Abe"
 }
 ```
-   - 2つ目のParticipantは下記の様に追記します。
+   - 2つ目のParticipantも「Create New Participant」から下記の様に編集します。
 ```
 {
   "$class": "org.hyperledger_composer.marbles.Player",
@@ -92,7 +94,56 @@
 }
 ```
 
-3. 
+3.  Testタブで**ASSETSインスタンスを遣り取りするMarble1個分を作成**
+　 - 続いてTestタブを選択した画面のまま、左画面のASSETS下の「Marble」を選択します。
+   - 左画面はASSETS下の「Marble」が選択状態になっている事を確認します。
+　 - **右上の「Create New Asset」ボタンを押下**してSmall Red Marbleとを追加します。
+   - ボタン押下でのポップアップ画面のデフォルトは下記になっています。
+```
+{
+  "$class": "org.hyperledger_composer.marbles.Marble",
+  "marbleId": "2222",
+  "size": "SMALL",
+  "color": "RED",
+  "owner": "resource:org.hyperledger_composer.marbles.Player#7178"
+}
+```
+  - marbleIdをデフォルト番号から「marble001」に変更します。
+  - またownerの#以下を、デフォルト番号からAbeさんのメールアドレスに変更します。
+  - 画面下の「Create New」ボタンを押下します。
+```
+{
+  "$class": "org.hyperledger_composer.marbles.Marble",
+  "marbleId": "marble001",
+  "size": "SMALL",
+  "color": "RED",
+  "owner": "resource:org.hyperledger_composer.marbles.Player#Shinzo.Abe@mail.jp"
+}
+```
+
+4.  **Marble001をTrumpさんに渡すTransactionを定義**する
+   - 左画面ボタンで**Submit Transactionボタンを押下**する
+　 - 左画面のSubmit Transactionボタンを押下するとポップアップでTransaction編集画面になります。
+　 - ポップアップ画面のデフォルトは下記になっています。
+```
+{
+  "$class": "org.hyperledger_composer.marbles.TradeMarble",
+  "marble": "resource:org.hyperledger_composer.marbles.Marble#1655",
+  "newOwner": "resource:org.hyperledger_composer.marbles.Player#3145"
+}
+```
+   - Marbleの#以降は「marble001」に編集し、newOwnerの#以降はTrumpさんのメールアドレスに編集します。
+   - ポップアップ最後の「Submit」を押下します。
+```
+{
+  "$class": "org.hyperledger_composer.marbles.TradeMarble",
+  "marble": "resource:org.hyperledger_composer.marbles.Marble#marble001",
+  "newOwner": "resource:org.hyperledger_composer.marbles.Player#Donald.Trump@mail.us"
+}
+```
+5. 
+
+
 ---
 
 
