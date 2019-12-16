@@ -55,14 +55,25 @@
 ### 実習手順[2]　Marbleのハンズオン基礎編
 
 - 構築したBlockchain上で、AbeさんとTrumpさんの間でMarbleのやりとり(=Assetの移転)をします。
-- 作業内容の確認
+
+1. **作業内容の確認**します。
    - 1. (Defineタブ)Model Fileの確認(Participantクラスの定義,Assetクラスの定義,Transactionクラスの定義)
    - 2. (Defineタブ)Script Fileの確認(Transaction Processor Functionの定義)
    - 3. (Defineタブ)Access Controlの確認
    - 4. (Testタブ)テスト用インスタンスの作成(Participantインスタンスの作成,Assetインスタンスの作成)
    - 5. (Testタブ)Transactionの実行
    - 6. (Testタブ)実行結果の確認(Assetインスタンスの確認)
-
+2. Testタブを選択した画面を開き、**右上の「Create New Participant」ボタンを押下**する。
+   - デフォルトは下記になっています。
+```
+{
+  "$class": "org.hyperledger_composer.marbles.Player",
+  "email": "8169",
+  "firstName": "",
+  "lastName": ""
+}
+```
+3. 
 ---
 
 
