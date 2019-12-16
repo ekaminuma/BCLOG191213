@@ -18,11 +18,16 @@
 詳しい実習手順は講義中に紫関講師により解説されています。講義ビデオは、データ人材育成プログラムの[e-Learning教材](https://md-dsc.learning-ware.jp/
 )で御確認下さい。
 
-- Hyperledger Composerの起動
+1. **Hyperledger Composerの起動**
    - https://hyperledger.github.io/composer/latest/ から「Try It Online」をクリック
-- Let's Blockchain 
+2. **Let's Blockchainを選択** 
    - Welcome to Hyperledger Composer Playground!とポップアップ画面が出るので、「Let's Blockchain」ボタンを押す。
-- 
+3. **Deploy a new business networkを選択**
+   - こんにちは、Hello, Composer!の右側の点線で囲まれている「Deploy a new business network」を選択。
+4. **empty-business-networkを選択**
+   - 「Deploy a new business network」の画面が現れる。
+   - (1.BASIC INFORMATION)(2.Model Network Starter Template)で「Empty-business-network」を選択
+   
 
 ---
 
