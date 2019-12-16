@@ -56,7 +56,7 @@
 
 - 構築したBlockchain上で、AbeさんとTrumpさんの間でMarbleのやりとり(=Assetの移転)をします。
 
-1. **作業内容の確認**します。
+1. **作業内容の確認**します。3番まではデータファイル読込で対応済です。
    - 1. (Defineタブ)Model Fileの確認(Participantクラスの定義,Assetクラスの定義,Transactionクラスの定義)
    - 2. (Defineタブ)Script Fileの確認(Transaction Processor Functionの定義)
    - 3. (Defineタブ)Access Controlの確認
@@ -141,8 +141,11 @@
   "newOwner": "resource:org.hyperledger_composer.marbles.Player#Donald.Trump@mail.us"
 }
 ```
-5. 
-
+5. Blockchainの資産移行手続きを確認
+   - ここでは、構築したBlockchain「AbeさんからTrumpeさんへのMarble遣り取り資産移行」の結果を確認します。
+   - 左画面のTRANSACTIONSから「All Transactions」を選択します。 
+   - 
+   - <img src="./BC_Marble001.png" alt="bc_marble_output" title="bc_result" width="400" border="1" />
 
 ---
 
