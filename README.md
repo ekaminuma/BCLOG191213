@@ -52,11 +52,11 @@
 
 ---
 
-### 実習手順[2]　Marbleのハンズオン基礎編
+### 実習手順[2]　ハンズオン基礎編：Marble1個の資産移動
 
-- 構築したBlockchain上で、AbeさんとTrumpさんの間でMarbleのやりとり(=Assetの移転)をします。
+- 構築したBlockchain上で、AbeさんとTrumpさんの間でMarble1個を受け渡し(=Assetの移転)をします。
 
-1. **作業内容の確認**します。3番まではデータファイル読込で対応済です。
+1. 下記の**作業内容**の4~6番を行います。1~3番までは前述7～9番(IBM社配布データをファイル読込)で対応済です。
    - 1. (Defineタブ)Model Fileの確認(Participantクラスの定義,Assetクラスの定義,Transactionクラスの定義)
    - 2. (Defineタブ)Script Fileの確認(Transaction Processor Functionの定義)
    - 3. (Defineタブ)Access Controlの確認
@@ -141,12 +141,13 @@
   "newOwner": "resource:org.hyperledger_composer.marbles.Player#Donald.Trump@mail.us"
 }
 ```
-5. BlockchainのMarble1個の資産移行手続きを確認
-   - ここでは、BlockchainのTransaction「AbeさんからTrumpeさんへのMarble遣り取り資産移行」の結果を確認します。
+5. **BlockchainのMarble1個の資産移行手続きを確認**
+   - ここでは、BlockchainのTransaction「AbeさんからTrumpeさんへのMarble1個遣り取り資産移行」の結果を確認します。
    - 左画面のTRANSACTIONSから「All Transactions」を選択します。 
-   - 下記の画面の各STEPが、BlockchainのTransactionになっています。PARTICIPANTとしてAbeさんやTrumpさんが追加されたTransaction結果が、一番右の「View Record」をクリックすると下記の様に確認できます。
+   - 下記の画面の各STEPが、BlockchainのTransactionになっています。PARTICIPANTとしてAbeさんやTrumpさんが追加されたTransaction結果が、一番右の「View Record」をクリックするとBlockchainのTransactionの結果を確認する事が出来ます。
    - <img src="./BC_Marble001.png" alt="bc_marble_output" title="bc_result" width="400" border="1" />
-   - ```
+   - Abeさんの**PARTICIPANT生成結果のTransactionを確認**する↓
+ ```
    {
  "$class": "org.hyperledger.composer.system.AddParticipant",
  "resources": [
@@ -161,7 +162,20 @@
  "transactionId": "f074f13c-cc90-4b55-8ed2-8d81cead56f2",
  "timestamp": "2019-12-16T04:16:22.135Z"
 }
-     ```
----
+```
+　　　- **Marble001のAbeさんからTrumpさんへの資産移動結果のTransactionを確認**する。↓
+```
+{
+ "$class": "org.hyperledger_composer.marbles.TradeMarble",
+ "marble": "resource:org.hyperledger_composer.marbles.Marble#marble001",
+ "newOwner": "resource:org.hyperledger_composer.marbles.Player#Donald.Trump@mail.us",
+ "transactionId": "2da9e1ff-75a2-4e76-82ab-42b622da0a3c",
+ "timestamp": "2019-12-16T04:43:00.596Z"
+}
+```
 
+---
+- Textでは、Marble2個の遣り取りのプログラムコードも紹介されています。受講生の皆様から御希望があれば、Marble2個部のコードもこちらに掲載致します。
+- まずはMarble1個遣り取りのBlockchain構築を楽しんで下さい。宜しくお願い申し上げます。
+- ※上記教材は、神沼がIBM社資料を基に作成しました。Blockchain入門講師の紫関様、西下様に内容を確認して頂いております。
 
