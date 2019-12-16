@@ -141,12 +141,27 @@
   "newOwner": "resource:org.hyperledger_composer.marbles.Player#Donald.Trump@mail.us"
 }
 ```
-5. Blockchainの資産移行手続きを確認
-   - ここでは、構築したBlockchain「AbeさんからTrumpeさんへのMarble遣り取り資産移行」の結果を確認します。
+5. BlockchainのMarble1個の資産移行手続きを確認
+   - ここでは、BlockchainのTransaction「AbeさんからTrumpeさんへのMarble遣り取り資産移行」の結果を確認します。
    - 左画面のTRANSACTIONSから「All Transactions」を選択します。 
-   - 
+   - 下記の画面の各STEPが、BlockchainのTransactionになっています。PARTICIPANTとしてAbeさんやTrumpさんが追加されたTransaction結果が、一番右の「View Record」をクリックすると下記の様に確認できます。
    - <img src="./BC_Marble001.png" alt="bc_marble_output" title="bc_result" width="400" border="1" />
-
+   - ```
+   {
+ "$class": "org.hyperledger.composer.system.AddParticipant",
+ "resources": [
+  {
+   "$class": "org.hyperledger_composer.marbles.Player",
+   "email": "Shinzo.Abe@mail.jp",
+   "firstName": "Shinzo",
+   "lastName": "Abe"
+  }
+ ],
+ "targetRegistry": "resource:org.hyperledger.composer.system.ParticipantRegistry#org.hyperledger_composer.marbles.Player",
+ "transactionId": "f074f13c-cc90-4b55-8ed2-8d81cead56f2",
+ "timestamp": "2019-12-16T04:16:22.135Z"
+}
+     ```
 ---
 
 
