@@ -74,7 +74,7 @@
     "lastName": ""
     }
 ``` 
-1つ目のParticipantを下記の様に編集します。email,firstName,lastNameを書き換えます。
+   1つ目のParticipantを下記の様に編集します。email,firstName,lastNameを書き換えます。
 ```js
    {
    "$class": "org.hyperledger_composer.marbles.Player",
@@ -83,7 +83,7 @@
    "lastName": "Abe"
    }    
 ```
-2つ目のParticipantも「Create New Participant」から下記の様に編集します。
+   2つ目のParticipantも「Create New Participant」から下記の様に編集します。
 ```js
    {
    "$class": "org.hyperledger_composer.marbles.Player",
@@ -107,9 +107,9 @@
   "owner": "resource:org.hyperledger_composer.marbles.Player#7178"
 }
 ```
-- marbleIdをデフォルト番号から「marble001」に変更します。
-- またownerの#以下を、デフォルト番号からAbeさんのメールアドレスに変更します。
-- 画面下の「Create New」ボタンを押下します。
+   - marbleIdをデフォルト番号から「marble001」に変更します。
+   - またownerの#以下を、デフォルト番号からAbeさんのメールアドレスに変更します。
+   - 画面下の「Create New」ボタンを押下します。
 ```js
 {
   "$class": "org.hyperledger_composer.marbles.Marble",
@@ -131,8 +131,8 @@
   "newOwner": "resource:org.hyperledger_composer.marbles.Player#3145"
 }
 ```
-- Marbleの#以降は「marble001」に編集し、newOwnerの#以降はTrumpさんのメールアドレスに編集します。
-- ポップアップ最後の「Submit」を押下します。
+   - Marbleの#以降は「marble001」に編集し、newOwnerの#以降はTrumpさんのメールアドレスに編集します。
+   - ポップアップ最後の「Submit」を押下します。
 ```js
 {
   "$class": "org.hyperledger_composer.marbles.TradeMarble",
