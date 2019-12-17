@@ -150,7 +150,7 @@
     - <img src="./BC_Marble001.png" alt="bc_marble_output" title="bc_result" width="400" border="1" />
     - [5-2] Abeさんの**PARTICIPANT生成結果のTransactionを確認**する
     - 1つ目のAddParticipant Transactionの「view record」を見てみましょう。
-    - ***timestampでTransaction生成時間の情報を保持しており、TransactionIdがハッシュ値で保存されている***事が判ります。(Blockchainでは、Hash値をチェーン構造で受け渡ししていきます。)
+    - ***timestampでTransaction生成時間の情報を保持しており、TransactionIdがハッシュ値で保存されている***事が判ります。(IBM紫関様情報：TransactionIdは確かにHash関数を使っていますが、これはトランザクションの発行者の証明書 (Certificat) にNonce (使い捨てのユニークな値) を組合せた値から計算したHash値で、その目的はTransactionIdをユニークな固定長の値にすることです。したがってこのHash値はトランザクションの改竄防止とは直接関係がありませんので御注意ください。)
     
 ```js
 {
