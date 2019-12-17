@@ -150,7 +150,9 @@
     - <img src="./BC_Marble001.png" alt="bc_marble_output" title="bc_result" width="400" border="1" />
     - [5-2] Abeさんの**PARTICIPANT生成結果のTransactionを確認**する
     - 1つ目のAddParticipant Transactionの「view record」を見てみましょう。
-    - ***timestampでTransaction生成時間の情報を保持しており、TransactionIdがハッシュ値で保存されている***事が判ります。(IBM紫関様情報：TransactionIdは確かにHash関数を使っていますが、これはトランザクションの発行者の証明書 (Certificat) にNonce (使い捨てのユニークな値) を組合せた値から計算したHash値で、その目的はTransactionIdをユニークな固定長の値にすることです。したがってこのHash値はトランザクションの改竄防止とは直接関係がありませんので御注意ください。)
+    - ***timestampでTransaction生成時間の情報を保持しており、TransactionIdがHash値で保存されている***事が判ります。注意すべき点は下記になります（IBM紫関様よりコメント）。
+      - TransactionIdは確かにHash関数を使っていますが、これはトランザクションの発行者の証明書 (Certificate) にNonce (使い捨てのユニークな値) を組合せた値から計算したHash値で、その目的はTransactionIdをユニークな固定長の値にすることです。したがってこの***TransactionIdのHash値は、トランザクションの改竄防止とは直接関係がありませんので御注意ください***。
+       - Blockchainは、作業毎に以前のHash値を基に、次のHash値を生成する仕組みを持ちます。***改竄防止のためのHash値は、TransactionIdではなくBlock Headerに記載されています***。ブロックチェーンでは、自ブロックおよび直前のブロックから計算したHash値をBlock Headerに埋め込むことも行っており、これは当該ブロック以前のブロック（つまりそれらのブロックに含まれるトランザクションの内容）が改竄されると値が変わってしまうため、改竄防止の役割を果たします。この2つ(TransactionIdのHash値とBlock HeaderのHash値)は区別する必要があります。
     
 ```js
 {
@@ -170,7 +172,7 @@
 ```
   - [5-3] **Marble001のAbeさんからTrumpさんへの資産移動結果のTransactionを確認**する。
   - 最新のTransactionのTradeMarbleの「view record」を見てみましょう。
-  - class,marble, newOwner以外に、transactionIdとtimestampが保存されている事が判ります。上記のAbeさんPARTICIPANT生成時も、同じ様にHash値が生成されていました。***Blockchainは、作業毎に以前のHash値を基に、次のHash値を生成する仕組みを持ちます。1つのTransactionを編集（改ざん）しようとすると、元のTransactionもHash値も辿って変更していく必要があるので、Blockchainは改ざんに頑健な仕組みと言われています***。
+  - class,marble, newOwner以外に、transactionIdとtimestampが保存されている事が判ります。transactionIdとtimestampは、資産移動時だけでなく、Participant生成時などの他の作業工程でも発行されています。
     
 ```js
 {
